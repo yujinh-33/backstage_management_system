@@ -1,7 +1,3 @@
-import { defineStore } from 'pinia'
+import { useLoginStore } from './login'
 
-export const useMainStore = defineStore('main', {
-  state: () => ({}),
-  getters: {},
-  actions: {}
-})
+export { useLoginStore }

@@ -15,4 +15,10 @@ const app = createApp(App)
 app.use(registerApp)
 app.use(router)
 app.use(pinia)
+
+// 当网站刷新时pinia中的数据会消失, 我们可以在这里调用一下pinia action请求函数
+import { useLoginStore } from '@/store'
+const loginStore = useLoginStore()
+loginStore.loadLocalLogin()
+
 app.mount('#app')

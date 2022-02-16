@@ -8,5 +8,18 @@ module.exports = {
     config.resolve.alias = {
       '@': path.resolve(__dirname, 'src')
     }
+
+    // 开发阶段跨域配置
+    // config.devServer = {
+    //   proxy: {
+    //     '^/api': {
+    //       target: 'http://152.136.185.210:5000',
+    //       pathRewrite: {
+    //         '^/api': ''
+    //       },
+    //       changeOrigin: true
+    //     }
+    //   }
+    // }
   }
 }

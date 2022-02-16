@@ -35,12 +35,12 @@ export default defineComponent({
   props: {},
   emits: {},
   setup() {
-    const isKeepPassword = ref(false)
+    const isKeepPassword = ref(true)
     // acount组件对象
     const acountRef = ref<InstanceType<typeof LoginAccount>>()
 
     const handleLoginClick = () => {
-      acountRef.value?.loginAction()
+      acountRef.value?.loginAction(isKeepPassword.value)
     }
 
     return {
